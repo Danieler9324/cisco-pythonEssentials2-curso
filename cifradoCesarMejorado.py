@@ -1,4 +1,3 @@
-# Cifrado César.
 text = input("Ingresa tu mensaje: ")
 try:
     valor = int(input("Ingresa un numero del 1 al 25: "))
