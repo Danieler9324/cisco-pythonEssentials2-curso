@@ -1,5 +1,6 @@
-class QueueError(IndexError):
+class QueueError(Exception):
     pass
+
 
 class Queue:
     def __init__(self):
@@ -10,15 +11,22 @@ class Queue:
 
     def get(self):
         if len(self.__queue) == 0:
-            raise QueueError
+            raise QueueError("Cola vacia")
         return self.__queue.pop()
 
-que = Queue()
+
+class SuperQueue(Queue):
+    def isempty(self):
+        return len(self._Queue__queue) == 0
+
+
+que = SuperQueue()
 que.put(1)
 que.put("perro")
 que.put(False)
-try:
-    for i in range(4):
+
+for i in range(4):
+    if not que.isempty():
         print(que.get())
-except:
-    print("Queue error")
+    else:
+        print("Cola vacia")
