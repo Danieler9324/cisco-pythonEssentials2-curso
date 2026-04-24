@@ -28,7 +28,7 @@ try:
     lineas = archivo.readlines()
     
     if not lineas:
-        raise FileEmpty
+        raise FileEmpty()
     
     alumnos = {}
 
