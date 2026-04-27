@@ -26,3 +26,16 @@ try:
     print(os.getcwd())
 except FileExistsError:
     print("El directorio ya existe en la ruta especificada")
+
+#rmdir
+
+os.mkdir("mi_sexto_directorio")
+print(os.listdir())
+os.rmdir("mi_sexto_directorio")
+print(os.listdir())
+    
+#removedirs
+
+os.makedirs("mi_septimo_directorio/mi_octavo_directorio")
+os.removedirs("mi_septimo_directorio/mi_octavo_directorio")
+print(os.listdir())
