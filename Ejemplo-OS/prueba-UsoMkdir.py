@@ -10,7 +10,19 @@ except FileExistsError:
     print("El directorio ya existe en la ruta especificada")
 
 #Makedirs
+try:
+    os.makedirs("mi_segundo_directorio/mi_tercer_directorio")
+    os.chdir("mi_segundo_directorio")
+    print(os.listdir())
+except FileExistsError:
+    print("El directorio ya existe en la ruta especificada")
 
-os.makedirs("mi_segundo_directorio/mi_tercer_directorio")
-os.chdir("mi_segundo_directorio")
-print(os.listdir())
+#getcwd
+try:
+    os.makedirs("mi_cuarto_directorio/mi_quinto_directorio")
+    os.chdir("mi_cuarto_directorio")
+    print(os.getcwd())
+    os.chdir("mi_quinto_directorio")
+    print(os.getcwd())
+except FileExistsError:
+    print("El directorio ya existe en la ruta especificada")
