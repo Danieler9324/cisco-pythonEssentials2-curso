@@ -1,5 +1,6 @@
 from datetime import date
-import time
+from datetime import time
+import time as tm
 
 # Date
 print("----------------- Uso de date  --------------------")
@@ -13,11 +14,19 @@ print("Dia:", hoy.day)
 
 # Time
 print("----------------- Uso de time  --------------------")
-timestamp = time.time()
+timestamp = tm.time()
 print("Marca de tiempo:", timestamp)
 
 dia = date.fromtimestamp(timestamp) 
 print("Fecha:", dia)
+
+t = time(14, 53, 20, 1)
+
+print("Tiempo:", t)
+print("Hora:", t.hour)
+print("Minutos:", t.minute)
+print("Segundos:", t.second)
+print("Microsegundo:", t.microsecond)
 
 # Replace
 print("----------------- Uso de replace  --------------------")
