@@ -33,6 +33,14 @@ print("-------- ctime  -------------")
 timestamp = 1572879180
 print(tm.ctime(timestamp))
 
+# struct_time
+print("-------- struct_time  -------------")                                        
+timestamp = 1572879180
+st = tm.gmtime(timestamp)
+
+print(tm.asctime(st))
+print(tm.mktime((2019, 11, 4, 14, 53, 0, 0, 308, 0)))  # <--- tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec, tm_wday, tm_yday, tm_isdts    
+
 # Replace
 print("----------------- Uso de replace  --------------------")
 dia2 = date(1991, 2, 5)
