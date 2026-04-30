@@ -1,5 +1,6 @@
 from datetime import date
 from datetime import time
+from datetime import datetime
 import time as tm
 
 # Date
@@ -28,6 +29,11 @@ print("Minutos:", t.minute)
 print("Segundos:", t.second)
 print("Microsegundo:", t.microsecond)
 
+# timestamp
+print("-------- timestamp -------------")
+dt = datetime(2020, 10, 4, 14, 55)
+print("Timestamp:", dt.timestamp())
+    
 # ctime
 print("-------- ctime  -------------")
 timestamp = 1572879180
@@ -39,7 +45,17 @@ timestamp = 1572879180
 st = tm.gmtime(timestamp)
 
 print(tm.asctime(st))
-print(tm.mktime((2019, 11, 4, 14, 53, 0, 0, 308, 0)))  # <--- tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec, tm_wday, tm_yday, tm_isdts    
+print(tm.mktime((2019, 11, 4, 14, 53, 0, 0, 308, 0)))  # <--- tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec, tm_wday, tm_yday, tm_isdts  
+
+print("-------- strftime  -------------")  
+d = date(2020, 1, 4)
+print(d.strftime('%Y/%m/%d'))
+
+t = time(14, 53)
+print(t.strftime("%H:%M:%S"))
+
+dt = datetime(2020, 11, 4, 14, 53)
+print(dt.strftime("%y/%B/%d %H:%M:%S"))
 
 # Replace
 print("----------------- Uso de replace  --------------------")
