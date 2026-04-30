@@ -28,6 +28,11 @@ print("Minutos:", t.minute)
 print("Segundos:", t.second)
 print("Microsegundo:", t.microsecond)
 
+# ctime
+print("-------- ctime  -------------")
+timestamp = 1572879180
+print(tm.ctime(timestamp))
+
 # Replace
 print("----------------- Uso de replace  --------------------")
 dia2 = date(1991, 2, 5)
