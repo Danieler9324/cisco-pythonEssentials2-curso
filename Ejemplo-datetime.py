@@ -47,7 +47,7 @@ st = tm.gmtime(timestamp)
 print(tm.asctime(st))
 print(tm.mktime((2019, 11, 4, 14, 53, 0, 0, 308, 0)))  # <--- tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec, tm_wday, tm_yday, tm_isdts  
 
-print("-------- strftime  -------------")  
+print("-------- strftime con datetime -------------")  
 d = date(2020, 1, 4)
 print(d.strftime('%Y/%m/%d'))
 
@@ -56,6 +56,13 @@ print(t.strftime("%H:%M:%S"))
 
 dt = datetime(2020, 11, 4, 14, 53)
 print(dt.strftime("%y/%B/%d %H:%M:%S"))
+
+print("-------- strftime con time -------------")
+timestamp = 1572879180
+st = tm.gmtime(timestamp)
+
+print(tm.strftime("%Y/%m/%d %H:%M:%S", st))
+print(tm.strftime("%Y/%m/%d %H:%M:%S"))
 
 # Replace
 print("----------------- Uso de replace  --------------------")
