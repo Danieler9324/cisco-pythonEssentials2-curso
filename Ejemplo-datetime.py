@@ -1,10 +1,11 @@
 from datetime import date
 from datetime import time
 from datetime import datetime
+from datetime import timedelta
 import time as tm
 
 
-# Date
+# ========================  Date  ==========================
 print("----------------- Uso de date  --------------------")
 hoy = date.today()
 
@@ -14,7 +15,7 @@ print("Mes:", hoy.month)
 print("Dia:", hoy.day)
 
 
-# Time
+# =======================  Time  ============================
 print("----------------- Uso de time  --------------------")
 timestamp = tm.time()
 print("Marca de tiempo:", timestamp)
@@ -88,7 +89,7 @@ dia2 = dia2.replace(year=1992, month=1, day=16)
 print(dia2)
 
 
-# weekday y isoweekday
+# =================  weekday y isoweekday  ====================
 print("----------------- Uso de weekday  --------------------")
 dia3 = date(1991, 2, 5)
 print(dia3.weekday())
@@ -96,3 +97,11 @@ print(dia3.weekday())
 
 print("----------------- Uso de isoweekday  -----------------")
 print(dia3.isoweekday())
+
+# =======================  timedelta  ============================
+print("----------------- Uso de timedelta  --------------------")
+
+delta = timedelta(weeks=6, days=20, hours=3.6)
+print("Dias: ", delta.days)
+print("Segundos: ", delta.seconds)
+print("Microsegundos: ", delta.microseconds)
