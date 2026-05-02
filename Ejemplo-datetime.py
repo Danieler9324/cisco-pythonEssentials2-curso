@@ -105,3 +105,15 @@ delta = timedelta(weeks=6, days=20, hours=3.6)
 print("Dias: ", delta.days)
 print("Segundos: ", delta.seconds)
 print("Microsegundos: ", delta.microseconds)
+
+delta2 = timedelta(weeks=2, days=2, hours=2)
+print(delta2)
+
+delta3 = delta2 * 2
+print(delta3)
+
+d = date(2019, 10, 4) + delta3
+print(d)
+
+dt = datetime(2019, 10, 4, 14, 53) + delta3
+print(dt)
