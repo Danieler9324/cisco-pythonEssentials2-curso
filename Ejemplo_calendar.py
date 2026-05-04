@@ -35,3 +35,10 @@ c = calendar.Calendar(calendar.SUNDAY)  # 0 = MONDAY, 1 = TUESDAY, 2 = WEDNESDAY
 
 for weekday in c.iterweekdays():
     print(weekday, end=" ")   # = 6, 0, 1, 2, 3, 4, 5
+
+print("\n==================  itermonthdates  =========================")
+
+ca = calendar.Calendar()
+
+for fecha in ca.monthdatescalendar(2020,11):
+    print(fecha, end=" \n" )
