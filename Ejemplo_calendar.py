@@ -22,3 +22,6 @@ calendar.prmonth(2021,12)
 
 print("===================  weekday  ===============================")
 print(calendar.weekday(2026, 4, 5))
+
+print("==================  weekheader  =============================")
+print(calendar.weekheader(2))
