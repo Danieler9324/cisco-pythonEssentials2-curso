@@ -25,3 +25,7 @@ print(calendar.weekday(2026, 4, 5))
 
 print("==================  weekheader  =============================")
 print(calendar.weekheader(2))
+
+print("===============  isleap/leapdays  ===========================")
+print(calendar.isleap(2020))
+print(calendar.leapdays(2010, 2026))
