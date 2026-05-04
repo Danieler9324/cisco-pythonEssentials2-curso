@@ -40,19 +40,23 @@ for fecha in ca.monthdatescalendar(2020,11):
     print(fecha, end=" \n" )
 
 print("\n==============  itermonthdays (2,3,4)  ====================")
-cal = calendar.Calendar()
 
-for itera in cal.itermonthdays(2020, 11):
+for itera in ca.itermonthdays(2020, 11):
     print(itera, end=" ")
 
 print("\n")
-for itera in cal.itermonthdays2(2020, 11):
+for itera in ca.itermonthdays2(2020, 11):
     print(itera, end=" ")
 
 print("\n")
-for itera in cal.itermonthdays3(2020, 11):
+for itera in ca.itermonthdays3(2020, 11):
     print(itera, end=" ")
 
 print("\n")
-for itera in cal.itermonthdays4(2020, 11):
+for itera in ca.itermonthdays4(2020, 11):
     print(itera, end=" ")
+
+print("\n===============  monthdays2calendar  ======================")
+
+for data in ca.monthdays2calendar(2020,11):
+    print(data)
