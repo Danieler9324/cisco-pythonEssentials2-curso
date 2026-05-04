@@ -1,13 +1,13 @@
-import calendar
-
-print("==================  calendar  ===============================")
-print(calendar.calendar(2026))
-
-print("===================  prcal  =================================")
-# prcal
-calendar.prcal(2026, w=2, l=1, c=3, m=2)
-
-print("====================  month  ================================")
+import calendar                                                                         # Clases para la creacion de calendarios
+                                                                                        #  -calendar.Calendar: otorga metodos para preparar datos de calendario y dar formato
+print("==================  calendar  ===============================")                  #  -calendar.TextCalendar: se usa para crear calendario de texto regulares                            
+print(calendar.calendar(2026))                                                          #  -calendar.HTMLCalendar: se utiliza para crear calendarios HTML
+                                                                                        #  -calendar.LocalTextCalendar: es una subclase de la clase calendar.TextCalendar. 
+print("===================  prcal  =================================")                  #                               El constructor de esta clase toma el parámetro locale,                              
+# prcal                                                                                 #                               el cual se utiliza para devolver los nombres 
+calendar.prcal(2026, w=2, l=1, c=3, m=2)                                                #                               apropiados de los meses y días de la semana.
+                                                                                        #  -calendar.LocalHTMLCalendar: tecnicamente es lo mismo que LocalTextCalendar pero
+print("====================  month  ================================")                  #                               ahora es la subclase de calendar.HTMLCalendar
 # month
 print(calendar.month(2026, 10))
 
@@ -29,3 +29,9 @@ print(calendar.weekheader(2))
 print("===============  isleap/leapdays  ===========================")
 print(calendar.isleap(2020))
 print(calendar.leapdays(2010, 2026))
+
+print("=================  iterweekdays  ============================")
+c = calendar.Calendar(calendar.SUNDAY)  # 0 = MONDAY, 1 = TUESDAY, 2 = WEDNESDAY, 3 = THURSDAY, 4 = FRIDAY,  5 = SATURDAY, 6 = SUNDAY
+
+for weekday in c.iterweekdays():
+    print(weekday, end=" ")   # = 6, 0, 1, 2, 3, 4, 5
